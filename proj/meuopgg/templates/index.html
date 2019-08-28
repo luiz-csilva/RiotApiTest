@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form method="POST" action="/level">
+        {% csrf_token %}
+        <p>Nome de invocador:</p>
+        <input type="text" name="summonerName">
+        <p>Servidor:</p>
+        <select name="region">
+            <option value="BR1">BR</option>
+            <option value="RU">RU</option>
+            <option value="KR">KR</option>
+            <option value="OC1">OC</option>
+            <option value="JP1">JP</option>
+            <option value="NA1">NA</option>
+            <option value="EUN1">EUN</option>
+            <option value="EUW1">EUW</option>
+            <option value="TR1">TR</option>
+            <option value="LA1">LAS</option>
+            <option value="LA2">LAN</option>
+        </select>
+        <button>Enviar</button>
+    </form>
+{% endblock %}
